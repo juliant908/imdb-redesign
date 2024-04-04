@@ -2,6 +2,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@components/*": ["./src/app/components/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@icons/*": ["./src/app/icons/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,

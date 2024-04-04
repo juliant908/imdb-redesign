@@ -1,0 +1,57 @@
+<header class="header grid place-items-center relative text-xs xl:text-lg">
+  <nav class="flex [grid-area: nav] flex-col place-self-start">
+    <div class="menu min-h-20 grid place-items-center">
+      <ul class="flex items-center">
+        <li class="me-7">
+          <a href="/">
+            <app-logo></app-logo>
+          </a>
+        </li>
+        @for(navItem of navMenus; track navItem.label) {
+        <li class="menu-item cursor-default px-2">{{ navItem.label }}
+          <div class="sub-menu h-[400px] absolute hidden py-4 left-0 w-full">
+            <div class="sub-menu-items py-4" [attr.data-sub-menu]="navItem.label">
+              <ul class="grid gap-x-8 gap-y-2 pt-4 text-pretty">
+                @for(subItem of navItem.subMenu; track subItem.label) {
+                <li class="submenu-item"><a href={{subItem.link}}>{{ subItem.label }}</a></li>
+                }
+              </ul>
+            </div>
+            <div class="subsection-logo py-8">
+              @switch (navItem.label) {
+              @case ('Movies') {
+              <app-popcorn></app-popcorn>
+              }
+              @case ('TV Shows') {
+              <app-tv></app-tv>
+              }
+              @case ('Celebs') {
+              <app-people></app-people>
+              }
+              @case ('Watch') {
+              <app-play></app-play>
+              }
+              @case ('Awards') {
+              <app-award></app-award>
+              }
+              @case ('Community') {
+              <app-help></app-help>
+              }
+              }
+            </div>
+          </div>
+        </li>
+        }
+      </ul>
+    </div>
+  </nav>
+  <div class="[grid-area:search] w-[90%] flex items-center bg-[#1A1A1A] rounded-md">
+    <select class="bg-transparent p-2" title="search" name="search" id="search">
+      <option value="english">All</option>
+      <option value="spanish">ES</option>
+    </select>
+    <input class="w-full px-1 py-2  bg-[#1A1A1A] rounded-md" type="text" placeholder="Search IMDb">
+    <app-search class="text-[#797979] p-2"></app-search>
+  </div>
+  <app-settings></app-settings>
+</header>

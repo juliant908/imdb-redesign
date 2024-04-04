@@ -1,0 +1,37 @@
+header {
+  grid-template-areas: 'nav search settings';
+  grid-template-columns: 2fr 2fr 1fr;
+  padding-inline: clamp(1rem, 5vw, 4rem);
+}
+
+input::placeholder {
+  color: #797979;
+}
+
+nav li:hover .sub-menu {
+  display: grid;
+}
+
+.sub-menu {
+  background-color: #0b0b0b;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-inline: clamp(1rem, 5vw, 4rem);
+  grid-gap: 1rem;
+}
+
+.sub-menu .subsection-logo {
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+
+.sub-menu-items ul {
+  grid-template-columns: 30ch 30ch;
+}
+
+.sub-menu-items ul li {
+  width: fit-content;
+}
+
+div[data-sub-menu='Community'] ul {
+  grid-template-columns: 1fr;
+}
