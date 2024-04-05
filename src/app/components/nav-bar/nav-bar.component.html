@@ -1,4 +1,4 @@
-<header class="header grid place-items-center relative text-xs xl:text-lg">
+<header class="header grid place-items-center relative text-xs xl:text-lg z-10 bg-[#0b0b0b]">
   <nav class="flex [grid-area: nav] flex-col place-self-start">
     <div class="menu min-h-20 grid place-items-center">
       <ul class="flex items-center">
@@ -9,7 +9,7 @@
         </li>
         @for(navItem of navMenus; track navItem.label) {
         <li class="menu-item cursor-default px-2">{{ navItem.label }}
-          <div class="sub-menu h-[400px] absolute hidden py-4 left-0 w-full">
+          <div class="sub-menu h-[400px] absolute hidden py-4 left-0 w-full ">
             <div class="sub-menu-items py-4" [attr.data-sub-menu]="navItem.label">
               <ul class="grid gap-x-8 gap-y-2 pt-4 text-pretty">
                 @for(subItem of navItem.subMenu; track subItem.label) {

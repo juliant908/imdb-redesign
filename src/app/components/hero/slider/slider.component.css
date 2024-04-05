@@ -1,0 +1,4 @@
+.slider img {
+  aspect-ratio: 16/9;
+  mask-image: linear-gradient(black 60%, transparent);
+}

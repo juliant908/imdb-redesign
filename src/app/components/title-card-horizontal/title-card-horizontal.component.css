@@ -1,0 +1,25 @@
+.title {
+  counter-increment: title-counter;
+}
+
+.title::before {
+  content: counter(title-counter);
+  font-weight: bold;
+  font-size: 28px;
+  border-right: 4px solid #F5C518;
+  height: min-content;
+  padding-right: 0.5rem;
+  font-family: 'Roboto', sans-serif, system-ui, -apple-system;
+  color: #C3C3C3
+}
+
+span {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+article {
+  grid-template-areas: 'image' 'info';
+  grid-template-rows: 200px 1fr;
+}

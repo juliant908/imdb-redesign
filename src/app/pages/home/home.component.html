@@ -1,0 +1,6 @@
+<app-hero></app-hero>
+<section class="flex flex-col gap-32">
+  @for(content of contents; track content.title){
+    <app-content [title]="content.title" [subtitle]="content.subtitle" [showIcon]="content.showIcon"></app-content>
+  }
+</section>

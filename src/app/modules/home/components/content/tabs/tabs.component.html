@@ -1,0 +1,5 @@
+<div class="rounded-lg p-2 flex justify-between bg-[#a3a3a3] bg-opacity-15 text-[#C3C3C3]">
+  @for(service of streamingServices; track $index){
+    <button (click)="selectService($index)" class="service-button text-xl rounded-md w-[142px] py-3 px-2">{{service}}</button>
+  }
+</div>

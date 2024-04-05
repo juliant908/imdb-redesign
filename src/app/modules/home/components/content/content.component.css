@@ -1,0 +1,55 @@
+article[data-content='Toppicks']::before {
+  content: 'What to Watch';
+  position: absolute;
+  top: -5%;
+  font-size: 181px;
+  line-height: 1;
+  font-weight: 900;
+  color: #c3c3c3;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+article[data-content='IMDbOriginals']::before {
+  content: 'Videos';
+  position: absolute;
+  align-self: center;
+  top: -5%;
+  font-size: 181px;
+  line-height: 1;
+  font-weight: 900;
+  color: #c3c3c3;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+article[data-content='Topboxoffice(US)']::before {
+  content: 'Explore';
+  position: absolute;
+  align-self: center;
+  top: -5%;
+  font-size: 181px;
+  line-height: 1;
+  font-weight: 900;
+  color: #c3c3c3;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+article[data-content='streaming'] {
+  margin-top: 8rem;
+}
+
+article[data-content='streaming']::before {
+  content: 'Streaming Now';
+  position: absolute;
+  align-self: center;
+  top: -25%;
+  font-size: 172px;
+  line-height: 1;
+  font-weight: 900;
+  color: #c3c3c3;
+  opacity: 0.1;
+  z-index: -1;
+}
+

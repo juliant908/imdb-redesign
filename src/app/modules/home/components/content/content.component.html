@@ -1,0 +1,8 @@
+<article class="relative flex flex-col" [attr.data-content]="title ? title.split(' ').join('') : 'streaming'">
+  <app-header [title]="title" [subtitle]="subtitle" [showButtons]="showButtons" [showIcon]="showIcon"></app-header>
+  <div class="flex items-center justify-between bg-[#0b0b0b]">
+    @for(movie of topThisWeek; track $index){
+    <app-title-card-vertical></app-title-card-vertical>
+    }
+  </div>
+</article>

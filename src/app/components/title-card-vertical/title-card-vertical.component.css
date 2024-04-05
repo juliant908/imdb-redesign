@@ -1,0 +1,17 @@
+img {
+  aspect-ratio: 9/16;
+}
+
+span{
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+button {
+  box-shadow:
+    1px -1px rgba(255, 255, 255, 0.08),
+    -1px -1px rgba(255, 255, 255, 0.08);
+
+
+}
