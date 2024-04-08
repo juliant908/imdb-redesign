@@ -1,3 +1,16 @@
-<div class="{{'rounded-full bg-[#a3a3a3] bg-opacity-15 text-[#c3c3c3] py-2 px-4'}}">
-  <span class="text-center">{{tagTitle}}</span>
+<div class="rounded-full bg-opacity-15 text-[#c3c3c3] py-2 px-4" [ngClass]="bgColor ? bgColor : 'bg-[#a3a3a3]'">
+  <span class="text-center" [ngClass]="icon ? ' flex gap-2 items-center' : ''">
+    @switch(icon){
+      @case('gallery'){
+        <app-gallery></app-gallery>
+      }
+      @case('list'){
+        <app-list></app-list>
+      }
+      @case('play'){
+        <app-trailer-play></app-trailer-play>
+      }
+    }
+    {{tagTitle}}
+  </span>
 </div>

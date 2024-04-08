@@ -8,6 +8,6 @@
   </div>
   @for(featureCard of featureCards.slice(0,3); track featureCard.id) {
   <app-feature-card [title]="featureCard.title" [subtitle]="featureCard.subtitle"
-    [imageUrl]="featureCard.imageUrl"></app-feature-card>
+    [bgImageUrl]="featureCard.bgImageUrl" [cardImageUrl]="featureCard.cardImageUrl"></app-feature-card>
   }
 </div>

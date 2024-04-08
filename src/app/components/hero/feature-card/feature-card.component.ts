@@ -9,7 +9,8 @@ import { TrailerPlayComponent } from '@icons/play.component';
   styleUrl: './feature-card.component.css'
 })
 export class FeatureCardComponent {
-  @Input() imageUrl: string = '/assets/images/dune2.png';
+  @Input() bgImageUrl: string = '/assets/images/dune2.png';
+  @Input() cardImageUrl: string = '/assets/images/all-about.png';
   @Input() title: string = 'Welcome to the Apocalypse!';
   @Input() subtitle: string = 'Watch the new “Fallout” Trailer';
 }

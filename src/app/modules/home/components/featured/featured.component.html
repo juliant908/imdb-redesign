@@ -1,0 +1,14 @@
+<article>
+  <div class="mb-2 relative">
+    <picture>
+      <img class="aspect-video max-w-[342px] h-auto" src={{featured.imageUrl}} alt={{featured.title}}>
+    </picture>
+    <div class="absolute bottom-5 left-3.5">
+      <app-tags [tagTitle]="featured.type" [icon]="featured.type.toLowerCase()"></app-tags>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <p class="text-[#c3c3c3]">{{featured.title}}</p>
+    <a class="text-yellow-500" href="#">{{featured.CTA}}</a>
+  </div>
+</article>

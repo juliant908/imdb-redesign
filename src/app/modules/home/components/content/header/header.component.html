@@ -18,7 +18,7 @@
   </div>
   @if(showButtons){
     <div class="flex gap-2 p-4">
-      <button class="bg-[#A3A3A3] bg-opacity-5 py-3 px-4 rounded-full"><i class="ti ti-chevron-left text-xl opacity-30"></i></button>
+      <button class="bg-[#A3A3A3] disabled:bg-opacity-5 bg-opacity-15 py-3 px-4 rounded-full" [disabled]='true'><i class="ti ti-chevron-left text-xl opacity-30"></i></button>
       <button class="bg-[#A3A3A3] bg-opacity-15 py-3 px-4 rounded-full text-xl"><i class="ti ti-chevron-right"></i></button>
     </div>
   }

@@ -1,8 +1,8 @@
-<div class="flex py-2 card max-w-[42ch]" [ngStyle]="{'--background-url': 'url(' + imageUrl + ')'}">
+<div class="flex py-2 card max-w-[42ch] bg-cover max-h-[183px]" [ngStyle]="{'--background-url': 'url(' + bgImageUrl + ')'}">
   <div class="flex-shrink-0 p-4 relative">
     <picture>
-      <source srcset="/assets/images/tlou.png" media="(min-width: 768px)">
-      <img src="/assets/images/tlou.png" alt="placeholder" class="w-24 h-auto">
+      <source srcset={{cardImageUrl}} media="(min-width: 768px)">
+      <img src={{cardImageUrl}} alt="placeholder" class="w-24 h-auto">
     </picture>
   </div>
   <div class="flex flex-col justify-between p-4 ps-0 text-[#c3c3c3]">
@@ -12,7 +12,7 @@
     </div>
     <div class="flex items-center gap-2 justify-end">
       <p class="text-[#c3c3c3]">3:18</p>
-      <div class="p-3 rounded-full bg-[#A3A3A3] bg-opacity-15">
+      <div class="p-3 rounded-full bg-[#A3A3A3] bg-opacity-15 cursor-pointer">
         <app-trailer-play></app-trailer-play>
       </div>
     </div>

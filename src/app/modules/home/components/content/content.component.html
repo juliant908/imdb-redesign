@@ -1,8 +1,45 @@
 <article class="relative flex flex-col" [attr.data-content]="title ? title.split(' ').join('') : 'streaming'">
   <app-header [title]="title" [subtitle]="subtitle" [showButtons]="showButtons" [showIcon]="showIcon"></app-header>
-  <div class="flex items-center justify-between bg-[#0b0b0b]">
-    @for(movie of topThisWeek; track $index){
-    <app-title-card-vertical></app-title-card-vertical>
+  <div class="flex items-center justify-between">
+    @switch(contentType){
+      @case('featured'){
+        @for(content of contents; track content.title){
+          <app-featured [featured]="content"></app-featured>
+        }
+      }
+      @case('originals'){
+        @for(content of contents; track content.title){
+          <app-video [video]="content"></app-video>
+        }
+      }
+      @case('box-office'){
+        <div class="grid grid-cols-3 gap-8">
+          @for(content of contents; track content.title){
+            <app-box-office [movie]="content"></app-box-office>
+          }
+        </div>
+      }
+      @case('coming-soon'){
+        @for(content of contents; track content.title){
+          <app-coming-soon [movie]="content"></app-coming-soon>
+        }
+      }
+      @case('born-today'){
+        @for(content of contents; track content.title){
+          <app-celeb [celeb]="content"></app-celeb>
+        }
+      }
+      @case('top-news'){
+        @for(content of contents; track content.title){
+          <app-news [news]="content"></app-news>
+        }
+      }
+      @default {
+        @for(content of contents; track content.title){
+          <app-title-card-vertical [movie]="content"></app-title-card-vertical>
+        }
+
+      }
     }
   </div>
 </article>

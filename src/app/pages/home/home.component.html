@@ -1,6 +1,7 @@
 <app-hero></app-hero>
 <section class="flex flex-col gap-32">
-  @for(content of contents; track content.title){
-    <app-content [title]="content.title" [subtitle]="content.subtitle" [showIcon]="content.showIcon"></app-content>
+  @for(section of sections; track section.title){
+  <app-content [title]="section.title" [subtitle]="section.subtitle" [showIcon]="section.showIcon"
+    [contents]="section.content" [contentType]="section.type"></app-content>
   }
 </section>
